@@ -17,6 +17,8 @@ worksheet = workbook.add_worksheet()
 def index():
     return 'App Running!'
 
-@app.route
+@app.route('hello')
+def hello():
     worksheet.write('A1', 'Hello world')
     workbook.close()
+    return 'Complete'
